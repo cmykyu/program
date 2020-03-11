@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Segoe UI Mono';
+            src: url(assets/fonts/segoeUIMono/SegoeUIMono.eot);
+            src: url(assets/fonts/segoeUIMono/SegoeUIMono.eot?#iefix) format("embedded-opentype"), url(assets/fonts/segoeUIMono/SegoeUIMono.woff2) format("woff2"), url(assets/fonts/segoeUIMono/SegoeUIMono.woff) format("woff"), url(assets/fonts/segoeUIMono/SegoeUIMono.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 安裝AOS外掛 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-inner">
+            <div class="logo">
+                <a href="https://www.microsoft.com" title="Go to Microsoft.com homepage">
+                    <div class="logo-content">
+                        <div class="logo-box microsoft-red"></div>
+                        <div class="logo-box microsoft-green"></div>
+                        <div class="logo-box microsoft-blue"></div>
+                        <div class="logo-box microsoft-yellow"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-fluentdesign">
+                <a title="Fluent Design System" href="#/">Fluent Design System</a>
+            </div>
+            <div class="nav-list">
+                <ul class="menu">
+                    <li><a class="web" title="View Web" href="#/web">Web</a></li>
+                    <li><a class="windows" title="View Windows" href="#/windows">Windows</a></li>
+                    <li><a class="ios" title="View iOS" href="#/ios">iOS</a></li>
+                    <li><a class="android" title="View Android" href="#/android">Android</a></li>
+                </ul>
+            </div>
+            <button class="MenuToggle mobile" tabindex="-1" aria-label="Mobile menu toggle">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="Introduction">
+            <div class="Introduction-inner">
+                <div class="Introduction-inner-L">
+                    <div class="Introduction-inner-L-title">
+                        <h2 class="Head">Fluent Design System</h2>
+                    </div>
+                    <div class="Introduction-inner-L-text">
+                        <p>Fluent brings the fundamentals of principled design, innovation in technology, and customer
+                            needs together as one. It’s a collective approach to creating simplicity and coherence
+                            through a shared, open design system across platforms.</p>
+                        <p>Open ecosystem, open design system.</p>
+                    </div>
+                </div>
+                <div class="Introduction-inner-R">
+                    <img class="R-line" src="./img/line-white-01.svg" aria-hidden="true">
+                    <img class="L-line" src="./img/line-white-02.svg" aria-hidden="true">
+                    <img class="BRAND" src="./img/icon-fluent@1x.png" title="Fluent Design System brand">
+                </div>
+            </div>
+        </section>
+        <section class="Platform">
+            <div class="Platform-inner">
+                <div class="Platform-inner-cards">
+                    <!-- card-web -->
+                    <div class="card">
+                        <a class="cardweb column" title="Design for Web" href="#/web">
+                            <div class="icon" aria-hidden="true">
+                                <img src="./img/icon-globe.svg" alt="Web icon"></div>
+                            <div class="card-content">
+                                <h2>Web</h2>
+                                <p>Create your own web apps and add-ins.</p>
+                            </div>
+                            <div class="get-started-content"><img src="./img/arrow-black.svg" aria-hidden="true"
+                                    alt="Design for Web"><span>Get started</span></div>
+                        </a>
+                    </div>
+                    <!-- card-windows -->
+                    <div class="card">
+                        <a class="cardwindows column" title="Design for Web" href="#/windows">
+                            <div class="icon" aria-hidden="true">
+                                <img src="./img/icon-windows.svg" alt="windows icon"></div>
+                            <div class="card-content">
+                                <h2>Windows</h2>
+                                <p>Create and publish your own Windows apps.</p>
+                            </div>
+                            <div class="get-started-content"><img src="./img/arrow-black.svg" aria-hidden="true"
+                                    alt="Design for Web"><span>Get started</span></div>
+                        </a>
+                    </div>
+                    <!-- card-ios -->
+                    <div class="card">
+                        <a class="cardios column" title="Design for Web" href="#/windows">
+                            <div class="icon" aria-hidden="true">
+                                <img src="./img/icon-ios.svg" alt="ios icon"></div>
+                            <div class="card-content">
+                                <h2>iOS</h2>
+                                <p>Take your custom apps to the mobile market.</p>
+                            </div>
+                            <div class="get-started-content"><img src="./img/arrow-black.svg" aria-hidden="true"
+                                    alt="Design for Web"><span>Get started</span></div>
+                        </a>
+                    </div>
+                    <!-- card-android -->
+                    <div class="card">
+                        <a class="cardandroid column" title="Design for Web" href="#/windows">
+                            <div class="icon" aria-hidden="true">
+                                <img src="./img/icon-android.svg" alt="ios icon"></div>
+                            <div class="card-content">
+                                <h2>Android</h2>
+                                <p>Take your custom apps to the mobile market.</p>
+                            </div>
+                            <div class="get-started-content"><img src="./img/arrow-black.svg" aria-hidden="true"
+                                    alt="Design for Web"><span>Get started</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Device">
+            <div class="Device-inner">
+                <!-- 1000 => 1s -->
+                <!-- data-aos-offset=滾軸觸發 -->
+                <div class="Device-inner-title" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="220">
+                    <h2 class="Device-inner-title-font">Natural on<br>
+                        every device</h2>
+                </div>
+                <div class="Device-inner-text-content">
+                    <div class="Device-inner-text-content-font" data-aos="fade-up" data-aos-duration="3000">
+                        <p>People move and shift across devices and platforms throughout their day. From laptops to
+                            phones, from PCs to holograms. From office to living room, from real to virtual. Experiences
+                            seamlessly move and shift with them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Space">
+            <div class="Space-inner">
+                <div class="line-block align-items-center aos-init aos-animate" data-aos="fade-up"
+                    data-aos-duration="1400" data-aos-offset="100" data-aos-anchor-placement="top-center"
+                    data-aos-easing="ease-in-out">
+                    <img src="./img/rect-white-01.svg" aria-hidden="true">
+                </div>
+                <div class="line-line aos-init aos-animate" data-aos="fade-up" data-aos-offset="550">
+                    <img src="./img/line-white-03.svg" aria-hidden="true">
+                </div>
+                <div class="ball aos-init aos-animate" data-aos="zoom-in">
+                    <img src="./img/sphere@1x.png" alt="Sphere">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="Space-textblock">
+                <div class="Space-textblock-content">
+                    <div class="Space-textblock-content-text">
+                        <p>When design is intuitive, people are inspired to move forward. They’re understood and their
+                            behavior is anticipated. Experiences adapt to their needs, intent, and context.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Mountain">
+            <div class="Mountain-textblock">
+                <div class="Mountain-text">
+                    <h2 class="lax" data-lax-preset="fadeIn" data-lax-opacity="0 1, 100 0, 150 100">Intuitive and<br>
+                        powerful</h2>
+                </div>
+            </div>
+            <div class="Mountain-mountain">
+                <img class="lax" data-lax-opacity="2381 0 , 2681 1" data-lax-scale="2251 1.2 , 2681 1"
+                    src="./img/terraforma@1x.png" alt="Terraforma landscape">
+            </div>
+        </section>
+        <section class="Design">
+            <div class="Design-diamonds">
+                <img class="diamond-block lax" data-lax-translate-y="2800 120, 3100 0" src="./img/plane-solid.svg">
+                <img class="diamond-line" src="./img/plane-outline.svg">
+            </div>
+            <div class="Design-inner">
+                <div class="Design-inner-01">
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">De—</h2>
+                </div>
+                <div class="Design-inner-02">
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">sign</h2>
+                </div>
+                <div class="Design-inner-line" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                    <img src="./img/line-black-01.svg">
+                </div>
+            </div>
+        </section>
+        <section class="Engi">
+            <div class="Engi-inner">
+                <div class="Engi-inner-title">
+                    <h2 role="text">Engaging and<br>immersive</h2>
+                </div>
+                <div class="Engi-inner-content">
+                    <p class="Engi-inner-content-textstyle">Experiences feel connected to the physical world-in
+                        the weave and fold of fundamental
+                        materials. Spaces feel clean, light and open. They draw people in, bring them together, and
+                        help them focus on what they’re trying to achieve.</p>
+                </div>
+                <div class="Engi-tools">
+                    <img src="./img/icon-arrangement@1x.png" alt="Engaging and immersive">
+                </div>
+            </div>
+        </section>
+        <section class="Star">
+            <div class="Star-inner">
+                <div class="star-black-block" data-aos="fade-up" data-aos-duration="3500">
+                    <img src="./img/icon-fluent-solid.svg">
+                </div>
+                <div class="star-line" data-aos="fade-up">
+                    <img src="./img/line-white-01.svg">
+                </div>
+                <div class="star-small" data-aos="fade-up">
+                    <img src="./img/rect-white-02.svg">
+                </div>
+                <div class="star-diamond" data-aos="fade-up">
+                    <img src="./img/rect-white-03.svg">
+                </div>
+                <div class="star-purple" data-aos="fade-up">
+                    <img src="./img/rect-lilac-01.svg">
+                </div>
+            </div>
+        </section>
+        <section class="Media">
+            <div class="Media-inner">
+                <div class="Media-cards">
+                    <div class="card-secondstyle c-00">
+                        <a href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history"
+                            target="_blank" title="How Microsoft learned from the past to redesign its future">
+                            <div class="m12-style" aria-hidden="true">
+                                <p class="white">How Microsoft learned from the past to redesign its future</p>
+                            </div>
+                            <div class="m12-logo">
+                                <div class="Icon-sc-1gma89l-5 brlidN">
+                                    <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                        <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+												h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+												c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="Title-sc-1gma89l-7 bDdnlG"><label aria-hidden="true">Microsoft
+                                        Design</label></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-secondstyle c-01">
+                        <a href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history"
+                            target="_blank" title="How Microsoft learned from the past to redesign its future">
+                            <div class="m12-style" aria-hidden="true">
+                                <p class="white">Evolving the Microsoft Fluent Design System</p>
+                            </div>
+                            <div class="m12-logo">
+                                <div class="Icon-sc-1gma89l-5 brlidN">
+                                    <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                        <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+												h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+												c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="Title-sc-1gma89l-7 bDdnlG"><label aria-hidden="true">Microsoft
+                                        Design</label></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-secondstyle c-02">
+                        <a href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history"
+                            target="_blank" title="How Microsoft learned from the past to redesign its future">
+                            <div class="m12-style" aria-hidden="true">
+                                <p class="black">Designing for Scale and Complexity</p>
+                            </div>
+                            <div class="m12-logo black">
+                                <div class="Icon-sc-1gma89l-5 brlidN">
+                                    <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                        <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+												h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+												c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="Title-sc-1gma89l-7 bDdnlG"><label aria-hidden="true">Microsoft
+                                        Design</label></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-secondstyle c-03">
+                        <a href="https://www.theverge.com/2019/4/29/18515776/microsoft-design-open-fluent-prototypes-history"
+                            target="_blank" title="How Microsoft learned from the past to redesign its future">
+                            <div class="m12-style" aria-hidden="true">
+                                <p class="black">Designing for Power & Simplicity</p>
+                            </div>
+                            <div class="m12-logo">
+                                <div class="Icon-sc-1gma89l-5 brlidN">
+                                    <svg width="195px" height="195px" viewBox="0 0 195 195">
+                                        <path d="M0,0v195h195V0H0z M162,46.2l-10.5,10c-0.9,0.7-1.3,1.8-1.2,2.9v73.7c-0.2,1.1,0.3,2.2,1.2,2.9l10.2,10v2.2
+												h-51.4v-2.2l10.6-10.3c1-1,1-1.3,1-2.9V73l-29.4,74.7h-4L54.4,73v50.1c-0.3,2.1,0.4,4.2,1.9,5.7L70,145.6v2.2H31v-2.2l13.8-16.7
+												c1.5-1.5,2.1-3.7,1.8-5.7v-58c0.2-1.6-0.5-3.2-1.7-4.3L32.7,46.2V44h38l29.4,64.4L125.8,44H162V46.2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="Title-sc-1gma89l-7 bDdnlG" class="black"><label aria-hidden="true">Microsoft
+                                        Design</label></div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="News">
+            <div class="News-inner">
+                <div class="News-inner-text">
+                    <div class="News-inner-text-title">
+                        <h2>Open starts with you</h2>
+                    </div>
+                    <div class="News-inner-text-content">
+                        <div class="News-inner-text-content-top">
+                            <p>We learn and improve the system based on feedback we receive from you—our customers,
+                                partners, and community of developers and designers. Work with us, work with each other,
+                                and we’ll all improve... together.</p>
+                        </div>
+                        <div class="News-inner-text-content-btm">
+                            <a href="https://www.linkedin.com/groups/13529340/" target="_blank"
+                                title="Join the conversation on LinkedIn">
+                                <img src="./img/arrow-white.svg" aria-hidden="true">
+                                <span>Join the community on LinkedIn</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footerstyle">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <a href="https://www.microsoft.com" title="Go to Microsoft.com homepage">
+                    <div class="footer-logo-content">
+                        <div class="logo-box microsoft-red"></div>
+                        <div class="logo-box microsoft-green"></div>
+                        <div class="logo-box microsoft-blue"></div>
+                        <div class="logo-box microsoft-yellow"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="https://www.microsoft.com/en-us/sitemap.aspx"
+                            aria-label="Navigate to the Microsoft sitemap">Sitemap</a></li>
+                    <li><a href="https://support.microsoft.com/en-us/contactus" aria-label="Contact Microsoft">Contact
+                            Microsoft</a></li>
+                    <li><a href="https://go.microsoft.com/fwlink/?LinkId=521839"
+                            aria-label="Read the Microsoft privacy and cookie policies">Privacy &amp; cookies</a></li>
+                    <li><a href="https://go.microsoft.com/fwlink/?LinkID=206977"
+                            aria-label="Read the Microsoft terms of use">Terms of use</a></li>
+                    <li><a href="https://www.microsoft.com/trademarks" aria-label="Microsoft trademarks">Trademarks</a>
+                    </li>
+                    <li><a href="https://choice.microsoft.com/" aria-label="Read about our ads">About our ads</a></li>
+                </ul>
+            </div>
+            <div class="footer-media">
+                <a href=""><i class="fab fa-linkedin"></i></a></i>
+                <a href=""><i class="fab fa-dribbble"></i></a></i>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-medium"></i></a></i>
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/99fefe31cc.js" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        AOS.init();
+
+        window.onload = function () {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+
+
+
+    </script>
+
+    <script>
+        window.onscroll = function () {
+            console.log(document.documentElement.scrollTop)
+        }
+    </script>
+
+</body>
+
+</html>
