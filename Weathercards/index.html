@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 微軟正黑體;
+            color: rgb(97, 97, 97);
+            line-height: 30px;
+
+        }
+        .conatiner{
+            width: 80%;
+            margin: 0 auto;
+          
+        }
+        .current_day{
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        .cards {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            height: 500px;
+            border-radius: 30px;
+            background-color: rgba(243, 243, 243, 0.6);
+            margin:0 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 3px 3px 9px rgb(128, 128, 128, 0.8);
+
+
+        }
+
+        .img {
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            padding-top: 25px;
+        }
+
+        .card-content {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="current_day"></div>
+        <div class="cards">
+            <!-- <div class="card">
+                <div class="img">
+                    <img src="https://static.newmobilelife.com/wp-content/uploads/2017/09/weather1.jpg" width="200px">
+                </div>
+                <div class="card-content">
+                    <h1>台北市</h1>
+                    <h2>多雲偶陣雨</h2>
+                    <div>
+                        <span>最高溫度:25c</span><br>
+                        <span>最低溫度:15c</span>
+                    </div>
+                    <div>需要攜帶雨具</div>
+                </div>
+            </div> -->
+            <!-- <div class="card">
+                <div class="img">
+                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/3a/96/4a/3a964ae5-2f89-da19-a513-59d8b345d410/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/246x0w.png"
+                        width="200px">
+                </div>
+                <div class="card-content">
+                    <h1>台中市</h1>
+                    <h2>多雲偶太陽</h2>
+                    <div>
+                        <span>最高溫度:30c</span><br>
+                        <span>最低溫度:28c</span>
+                    </div>
+                    <div>記得做好防曬</div>
+                </div>
+            </div> -->
+            <!-- <div class="card">
+                <div class="img">
+                    <img src="https://cdn.jim-nielsen.com/ios/512/weather-2019-02-07.png" width="200px">
+                </div>
+                <div class="card-content">
+                    <h1>台南市</h1>
+                    <h2>太陽偶陣雨</h2>
+                    <div>
+                        <span>最高溫度:25c</span><br>
+                        <span>最低溫度:15c</span>
+                    </div>
+                    <div>需要攜帶雨具</div>
+                </div>
+            </div> -->
+            <!-- <div class="card">
+                <div class="img">
+                    <img src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png"
+                        width="200px">
+                </div>
+                <div class="card-content">
+                    <h1>台東市</h1>
+                    <h2>多雲小太陽</h2>
+                    <div>
+                        <span>最高溫度:28c</span><br>
+                        <span>最低溫度:16c</span>
+                    </div>
+                    <div>需要攜帶雨具</div>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+
+
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-24B2520E-358D-4D63-9C7A-067F54EB23AF')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (weather_array) {
+                // console.log(weather_array);
+
+                var locations = weather_array.records.location
+                // console.log(locations)
+
+                locations.forEach(location => {
+                    var location_name = location.locationName //地點
+                    // console.log(location_name)
+
+                    var Wx = location.weatherElement[0].time[0].parameter.parameterName //天氣描述
+                    // console.log(Wx)
+
+                    var MaxT = location.weatherElement[4].time[0].parameter.parameterName //最高溫
+                    // console.log(MaxT)
+
+                    var MinT = location.weatherElement[2].time[0].parameter.parameterName //最低溫
+                    // console.log(MinT)
+
+                    var Wx_code = location.weatherElement[0].time[0].parameter.parameterValue //天氣代號
+                    // console.log(Wx_code)
+
+                    //判斷式
+                    if (Wx_code == '1') {
+                        var weather_icon = 'https://static.newmobilelife.com/wp-content/uploads/2017/09/weather1.jpg'
+
+                    }
+                    else if (Wx_code == '2' || Wx_code == '3' || Wx_code == '4' || Wx_code == '5') {
+                        var weather_icon = "https://cdn.jim-nielsen.com/ios/512/weather-2019-02-07.png"
+
+                    }
+                    //剩餘選擇
+                    else { var weather_icon = 'https://static.newmobilelife.com/wp-content/uploads/2017/09/weather1.jpg'}
+
+                    var cards = document.querySelector('.cards')
+                    
+
+                    //樣板字串 .innerHTML += ` `
+                    cards.innerHTML += `
+                    <div class="card">
+                         <div class="img">
+                           <img src="${weather_icon}"
+                         width="200px">
+                         </div>
+                         <div class="card-content">
+                           <h1>${location_name}</h1>
+                           <h2>${Wx}</h2>
+                         <div>
+                           <span>最高溫度:${MaxT}°C</span><br>
+                           <span>最低溫度:${MinT}°C</span>
+                         </div>
+                         <div>需要攜帶雨具</div>
+                        </div>
+                    </div>
+                    `
+
+                });
+                
+                //js內建標準時間
+                var today = new Date();
+                var current_day = today.getFullYear() + '年' + (today.getMonth() +1 ) + '月' + today.getDate() + '日';
+                var current_time = today.getHours() +':' + today.getMinutes();
+
+                var time = document.querySelector('.current_day');
+                time.innerHTML += '現在時間' + current_day + current_time
+
+
+            });
+    </script>
+
+</body>
+
+</html>
