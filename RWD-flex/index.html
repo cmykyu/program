@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        *{  
+            box-sizing: border-box;
+            font-family: 'Permanent Marker', cursive;
+            transition: all 1s;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+        .flex{
+            display: flex;
+        }
+        /* 預設拿掉 */
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            /* background-color: rgb(38, 241, 157); */
+            line-height: 25px;
+            padding: 14px 30px;
+            margin: 0 0 10px 0;
+            color: rgb(255, 255, 255);
+            font-size: 19px;
+            border-style:solid;
+            border-color:rgba(236, 236, 236, 0.8);
+            
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .mask:hover{
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .all{
+            /* background-color: rgb(240, 153, 24); */
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background-image: url('img/001.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+           
+        }
+        .photo-style{
+            background-size: cover;
+            background-position: center;
+        }
+        .nav{
+            background-color: rgb(48, 48, 48, 0.5);
+            width: 366px;
+            height: 100vh;
+            padding: 75px 0 0 0;
+            /* +75px? */
+            flex-direction: column;
+            align-items: center;
+            min-height: 570px;
+        }
+        #logo{
+            background-color: rgb(240, 240, 240);
+            background-image: url('img/logo.png');
+            width: 150px;
+            height: 150px;
+            margin: 0 0 75px 0;
+        }
+        .content{
+            /* background-color: cadetblue; */
+            background-image: url('img/bg.jpg');
+            width: calc(100% - 366px);
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            /* background-color: darkgoldenrod; */
+            width: 957px;
+            height: 570px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .inside-box-size-pc-phone{
+            width: 33%;
+            height: 100%;
+        }
+        #box-x{
+            background-image: url('img/A.jpg');
+        }
+        #box-y{
+            background-image: url('img/B.jpg');
+        }
+        #box-z{
+            background-image: url('img/C.jpg');
+        }
+        /* pc-small */
+        @media (max-width: 1323px){
+            .box{
+                width: 800px;
+                height: 570px;
+                flex-wrap: wrap;
+            }
+            #box-x{
+                width: 100%;
+                height: calc(50% - 5px);
+                margin: 0 0 10px 0;
+            }
+            #box-y{
+                width: calc(50% - 5px);
+                height: calc(50% - 5px);
+                margin: 0 10px 0 0;
+            }
+            #box-z{
+                width: calc(50% - 5px);
+                height: calc(50% - 5px);
+            }
+        }
+        /* 平板 */
+        @media (max-width:1166px){
+            .all{
+                display: block;
+            }
+            .all{
+                flex-direction: column;
+            }
+            .nav{
+                 width: unset;
+                 height: 100px;
+                 min-height: unset;
+                 padding: 0;
+                 justify-content: space-around;
+                 flex-direction: row;
+            }
+            #logo{
+                width: 65px;
+                height: 65px;
+                /* 記得消除歸0 */
+                margin: 0;
+            }
+            li{
+                display:inline-block;
+            }
+            .content{
+                width: 100%;
+                /* 不可寫做100vw */
+                height: calc(100vh + 400px)
+            }
+            .box{
+                width: 700px;
+                height: 800px;
+            }
+        }
+        /* 手機 */
+        @media (max-width: 700px){
+            .pc{
+                display: none;
+            }
+            .mobile{
+                display: block;
+            }
+            .nav{
+                height: 80px;
+                justify-content: flex-start;
+                padding: 0 0 0 15px;
+                position: relative;
+                
+            }
+            #logo{
+                width: 55px;
+                height: 55px;
+                margin: 0 auto;
+                /* position: relative; */
+                right: 30px;
+
+            }
+            li{
+                display: block;
+            }
+            #menu{
+                width: 50px;
+                height: 50px;
+                /* background-color: rgb(238, 255, 241); */
+                background-image: url('img/icon.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                order: -1;
+                /* position: relative; */
+            }
+            /* 選單區塊 */
+            .menu-btn{
+                /* margin-top: 20px; */
+                /* position: fixed ; */
+                position: absolute;
+                top: 70px;
+                left: 14px;
+                display: none;
+            }
+            #menu:hover + .menu-btn{
+                display: block;
+            }
+            .content{
+                width: 100%;
+                height: unset;
+                flex-direction: column;
+                justify-content: flex-start;
+                min-height: unset;
+            }
+            .box{
+                width: 100%;
+                height: unset;
+                flex-direction: column;
+                justify-content: center;
+            }
+            #box-x{
+                height: 50vh;
+                margin: 0;
+            }
+            #box-y{
+                width: 100%;
+                height: 50vh;
+                margin: 0;
+            }
+            #box-z{
+                width: 100%;
+                height: 50vh;
+                margin: 0;
+            }
+        }
+
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="all flex">
+        <div class="nav flex">
+            <div id="logo" class="photo-style"></div>
+            <div id="menu"></div>
+            <div class="menu-btn pc mobile">
+                <ul>
+                    <li>ABOUT</li>
+                    <li>PRODUCT</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content flex">
+            <div class="box flex">
+                <div id="box-x" class="photo-style inside-box-size-pc-phone">
+                    <div class="mask"></div>
+                </div>
+                <div id="box-y" class="photo-style inside-box-size-pc-phone">
+                    <div class="mask"></div>
+                </div>
+                <div id="box-z" class="photo-style inside-box-size-pc-phone">
+                    <div class="mask"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
