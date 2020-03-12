@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DISCOVERITY</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(32, 32, 32);
+            scroll-behavior: 1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #all{
+            background-color: blue;
+            width: 80%;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            background-attachment: scroll;
+            min-width: 1024px;
+            
+
+        }
+        #navbar{
+            /* background-color: aliceblue; */
+            width: 80%;
+            height: 150px;
+            left: 10%;
+            right: 10%;
+            
+            position: relative;
+            
+            position: fixed;   
+        }
+        #avatar{
+            background-color: rgb(255, 255, 255);
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            float: left;
+            background-image: url('img/sectionlogo.jpg');
+            background-size: 98%;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow:5px 5px 5px rgb(36, 36, 36);
+            
+            position: absolute;
+            left: 25px;
+            top: 25px;
+        }
+
+        #menu{
+            /* background-color: rgba(46, 42, 42, 0.5); */
+            width:calc(100% - 230px);
+            height: 40px;
+            float: right;
+            position: absolute;
+            left: 230px;
+            top: 85px;
+            /* position: absolute;
+            right: calc(10% + 3px); */
+            
+            
+            
+        }
+        #nav_lion{
+            background-color: rgb(218, 218, 218);
+            line-height: 40px;
+            padding: 0 30px;
+            float: right;
+        }
+        #nav_zebra{
+            background-color: rgb(218, 218, 218);
+            line-height: 40px;
+            padding: 0 30px;
+            float: right;
+            margin-right: 25px;
+        }
+        #nav_giraffe{
+            background-color: rgb(218, 218, 218);
+            line-height: 40px;
+            padding: 0 30px;
+            float: right;
+            margin-right: 25px;
+        }
+
+
+        #selection_A{
+            background-color: cadetblue;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+            background-image: url('img/section01.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #selection_A_block{
+            width: 100%;
+            padding: calc(25vh - 25px) 0;
+        }
+        .block_color{
+            background-color: rgba(46, 42, 42, 0.5);
+        }
+
+        #selection_A_block_btn{
+            width: 250px;
+            height: 50px;
+            background-color: rgb(119, 236, 119);
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25px;
+        }
+
+        #selection_B{
+            background-color: cadetblue;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+            background-image: url('img/section02.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #selection_C{
+            background-color: cadetblue;
+            width: 100%;
+            height: 50vh;
+            padding-top: 50vh;
+            background-image: url('img/section03.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        
+        
+        a:visited{
+            color: darkgreen;
+        }
+        
+        
+        
+    </style>
+
+
+</head>
+<body>
+    <div id="all">
+        <div id="navbar">
+            <div id="avatar"></div>
+            <div id="menu">
+               <a href="#selection_A"><div id="nav_lion">Lion</div></a>
+               <a href="#selection_B"><div id="nav_zebra">Zebra</div></a>
+               <a href="#selection_C"><div id="nav_giraffe">Giraffe</div></a>
+            </div>
+        </div>
+        
+        <div id="selection_A">
+            <div id="selection_A_block" class="block_color">
+                <div id="selection_A_block_btn" class="btn-color"></div>
+            </div>
+
+        </div>
+        <div id="selection_B">
+            <div id="selection_A_block" class="block_color">
+                <div id="selection_A_block_btn" class="btn-color"></div>
+            </div>
+
+        </div>
+        <div id="selection_C">
+            <div id="selection_A_block" class="block_color">
+                <div id="selection_A_block_btn" class="btn-color"></div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
